@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Portela Bar - Admin</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+
+<!-- LOGIN -->
+<div id="login-screen">
+    <div class="login-box">
+        <div class="login-logo">Portela <span>Bar</span></div>
+        <div class="login-sub">Área Administrativa</div>
+        <div class="lfield">
+            <label>E-mail</label>
+            <input type="email" id="lemail" placeholder="admin@portelabar.com" autocomplete="username">
+        </div>
+        <div class="lfield">
+            <label>Senha</label>
+            <input type="password" id="lsenha" placeholder="••••••••" autocomplete="current-password">
+        </div>
+        <button class="btn-entrar" onclick="login()">Entrar</button>
+        <div class="login-erro" id="lerro"></div>
+    </div>
+</div>
+
+<!-- ADMIN -->
+<div id="admin-panel">
+
+    <header class="hero hero-admin">
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger-icon" aria-label="Abrir Menu">
+            <span></span><span></span><span></span>
+        </label>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#pag-eventos">Eventos</a></li>
+                <li><a href="cardapio.html">Cardápio</a></li>
+                <li><a href="index.html#pag-sobre">Sobre</a></li>
+                <li><a href="index.html#pag-contato">Contato</a></li>
+                <li><a href="admin.html" class="nav-admin-icon" title="Área Administrativa"><i class="fas fa-user-circle"></i></a></li>
+            </ul>
+        </nav>
+        <div class="hero-admin-content">
+            <h1>Painel <span>Admin</span></h1>
+            <p>Gestão de Eventos</p>
+        </div>
+    </header>
+
+    <div class="admin-main">
+        <div class="admin-toolbar">
+            <h2>Agenda de Eventos</h2>
+            <button class="btn-novo" onclick="abrirNovo()">
+                <i class="fas fa-plus"></i> Novo Evento
+            </button>
+        </div>
+        <div id="events-grid"></div>
+    </div>
+
+    <footer id="pag-rodape">
+        <div class="rodape-content container">
+            <div class="rodape-col">
+                <h3>Portela Bar</h3>
+                <p>O melhor bar para assistir jogos, curtir música ao vivo e saborear drinks incríveis.</p>
+            </div>
+            <div class="rodape-col">
+                <h3>Contato</h3>
+                <div class="info-rodape"><i class="fas fa-map-marker-alt"></i><p>Rua dos Bares, 123 - Brasília</p></div>
+                <div class="info-rodape"><i class="fab fa-whatsapp"></i><p>(11) 98765-4321</p></div>
+                <div class="info-rodape"><i class="fab fa-instagram"></i><p>Instagram</p></div>
+            </div>
+            <div class="rodape-col">
+                <h3>Horário</h3>
+                <p>Segunda a Quinta: 17h - 00h</p>
+                <p>Sexta e Sábado: 17h - 02h</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2025 Portela Bar. Todos os direitos reservados.</p>
+            <p>Desenvolvido por Tais, Jose Vinicius e Wellington</p>
+        </div>
+    </footer>
+</div>
+
+<!-- MODAL EVENTO -->
+<div class="modal-ov" id="mod-ev">
+    <div class="modal-box">
+        <h2 id="mod-titulo">Novo Evento</h2>
+        <div class="frow2">
+            <div class="fg full"><label>Título</label><input type="text" id="etitulo" placeholder="ex: Champions League"></div>
+            <div class="fg full"><label>Descrição</label><input type="text" id="edesc" placeholder="ex: Futebol europeu de alto nível"></div>
+            <div class="fg"><label>Data</label><input type="text" id="edata" placeholder="ex: Quarta, 20 Dez"></div>
+            <div class="fg"><label>Horário</label><input type="text" id="ehor" placeholder="ex: 21h"></div>
+            <div class="fg"><label>Entrada</label><input type="text" id="eent" placeholder="ex: Entrada Gratuita"></div>
+            <div class="fg"><label>Ícone</label>
+                <select id="eicone">
+                    <option value="ticket">Ingresso</option>
+                    <option value="bell">Consumação</option>
+                    <option value="music">Música</option>
+                    <option value="futbol">Futebol</option>
+                </select>
+            </div>
+            <div class="fg full"><label>Atração</label><input type="text" id="eatr" placeholder="ex: Grupo Revelação"></div>
+            <div class="fg full">
+                <label>URL da Imagem</label>
+                <input type="text" id="eimg" placeholder="img/imagemusic.png" oninput="prevImg()">
+                <img id="iprev" class="img-prev" alt="preview">
+            </div>
+        </div>
+        <div class="modal-acts">
+            <button class="btn-cancelar" onclick="fecharMod()">Cancelar</button>
+            <button class="btn-salvar" onclick="salvar()"><i class="fas fa-check"></i> Salvar</button>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL CONFIRMAR REMOÇÃO -->
+<div class="modal-ov" id="mod-del">
+    <div class="modal-box modal-confirm">
+        <div class="ic-danger"><i class="fas fa-trash-alt"></i></div>
+        <h2>Remover Evento</h2>
+        <p>Tem certeza? Esta ação não pode ser desfeita.</p>
+        <div class="modal-acts">
+            <button class="btn-cancelar" onclick="fecharDel()">Cancelar</button>
+            <button class="btn-del" onclick="confirmarDel()">Sim, remover</button>
+        </div>
+    </div>
+</div>
+
+<div class="toast" id="toast"></div>
+</body>
+</html>

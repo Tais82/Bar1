@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Portela Bar</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Grupo 9" />
+    <meta name="keywords" content="Bar, comidas, jogos, entretenimentos, futebol." />
+    <meta name="description" content="Bar com eventos de futebol, karaoke, comidas e culinária peruana." />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+    <header class="hero">
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+    <label for="menu-toggle" class="hamburger-icon" aria-label="Abrir Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="#pag-home">Home</a></li>
+                <li><a href="#pag-eventos">Eventos</a></li>
+                <li><a href="cardapio.html">Cardápio</a></li>
+                <li><a href="#pag-sobre">Sobre</a></li>
+                <li><a href="#pag-contato">Contato</a></li>
+                <li><a href="admin.html" class="nav-admin-icon" title="Área Administrativa"><i class="fas fa-user-circle"></i></a></li>
+            </ul>
+        </nav>
+        <div class="hero-content">
+            <h1>Portela <span class="bar-word">Bar</span></h1>
+            <p class="description">A experiência perfeita para saborear, assistir e celebrar</p>
+            <div class="cta-buttons">
+                <a href="cardapio.html" class="btn btn-primary">Ver Cardápio</a>
+                <a href="#pag-eventos" class="btn btn-secondary">Ver Eventos</a>
+            </div>
+        </div>
+        
+    </header>
+
+    <section class="features-section">
+        <div class="container">
+            <h2 class="section-title">Sabores do Peru • TV de 85" • Música Ao Vivo</h2>
+            <p class="section-description">
+                Descubra a explosão de sabores da culinária peruana autêntica, com ingredientes frescos e pratos irresistíveis,
+                ao som de música ao vivo e na tela gigante de 85". O destino ideal para encontros animados, 
+                celebrações memoráveis ou noites mágicas onde sabor, energia e diversão criam momentos inesquecíveis!
+            </p>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <img src="img/imagerestau.png" alt="Bar com garrafas" class="feature-icon">
+                    <p class="feature-label">Imagem</p>
+                </div>
+                <div class="feature-item">
+                    <img src="img/imagemusic.png" alt="TV de 85 polegadas" class="feature-icon">
+                    <p class="feature-label">Imagem</p>
+                </div>
+                <div class="feature-item">
+                    <img src="img/imagetv.png" alt="Prato peruano" class="feature-icon">
+                    <p class="feature-label">Imagem</p>
+                </div>
+                <div class="feature-item">
+                    <img src="img/image4.png" alt="Prato Arroz Chaufa" class="feature-icon">
+                    <p class="feature-label">Imagem</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CARDÁPIO: 4 CARDS PEQUENOS LADO A LADO -->
+    <section id="pag-cardapio">
+        <div class="container">
+            <h2><span class="bar-word">Destaques </span>do cardápio</h2>
+            <div class="cardapio-grid">
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img class="img-cardapio" src="img/bisteca.png" alt="Pisco Sour" />
+                    </div>
+                    <div class="card-content">
+                        <h3>Pisco Sour</h3>
+                        <p>Drink tradicional peruano com pisco, limão e clara de ovo</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img class="img-cardapio" src="img/figado acebolado.png" alt="Lomo Saltado" />
+                    </div>
+                    <div class="card-content">
+                        <h3>Lomo Saltado</h3>
+                        <p>Carne salteada com cebola, tomate e batata frita</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img class="img-cardapio" src="img/file de tilapia.png" alt="Caipirinha de Maracujá" />
+                    </div>
+                    <div class="card-content">
+                        <h3>Caipirinha de Maracujá</h3>
+                        <p>Cachaça artesanal com maracujá fresco</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img class="img-cardapio" src="img/image4.png" alt="Arroz Chaufa" />
+                    </div>
+                    <div class="card-content">
+                        <h3>Arroz Chaufa</h3>
+                        <p>Arroz frito com frango, legumes e molho de soja</p>
+                    </div>
+                </div>
+            </div>
+            <div class="botoes-form">
+                <a href="cardapio.html" class="btn btn-primary">Ver Cardápio <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- EVENTOS: 4 CARDS LADO A LADO, FIXOS -->
+    <section id="pag-eventos">
+        <div class="container">
+            <h2>Agenda de Eventos</h2>
+            <h3 class="eventos-subtitle">Shows ao vivo e transmissões dos principais jogos na nossa TV de 85 polegadas</h3>
+            <div class="eventos-categorias">
+                <a href="#pag-eventos" class="categoria-item">
+                    <i class="fas fa-tv"></i>
+                    <p>TV de 85 Polegadas</p>
+                </a>
+                <a href="#pag-eventos" class="categoria-item">
+                    <i class="fas fa-music"></i>
+                    <p>Música ao Vivo</p>
+                </a>
+            </div>
+            <div id="container-eventos">
+                <div class="card-eventos">
+                    <img class="img-eventos" src="img/imagemusic.png" alt="Samba & Pagode ao Vivo" />
+                    <div class="card-eventos-content">
+                        <h3 class="event-title">Samba & Pagode ao Vivo</h3>
+                        <p class="event-description">Uma noite especial com o melhor samba</p>
+                        <div class="event-details">
+                            <p><i class="fas fa-calendar-alt"></i> Sexta-Feira, 15 Dez</p>
+                            <p><i class="fas fa-clock"></i> 21h</p>
+                            <p><i class="fas fa-ticket-alt"></i> Entrada Gratuita</p>
+                        </div>
+                        <p class="event-attraction-label">Atração</p>
+                        <h4 class="event-attraction">Grupo Revelação</h4>
+                    </div>
+                </div>
+                <div class="card-eventos">
+                    <img class="img-eventos" src="img/imagefut.png" alt="Champions League" />
+                    <div class="card-eventos-content">
+                        <h3 class="event-title">Champions League</h3>
+                        <p class="event-description">Futebol europeu de alto nível</p>
+                        <div class="event-details">
+                            <p><i class="fas fa-calendar-alt"></i> Quarta-Feira, 20 Dez</p>
+                            <p><i class="fas fa-clock"></i> 17h</p>
+                            <p><i class="fas fa-concierge-bell"></i> Consumação</p>
+                        </div>
+                        <p class="event-attraction-label">Atração</p>
+                        <h4 class="event-attraction">Manchester City X Bayern</h4>
+                    </div>
+                </div>
+                <div class="card-eventos">
+                    <img class="img-eventos" src="img/imagemusic.png" alt="Samba & Pagode ao Vivo" />
+                    <div class="card-eventos-content">
+                        <h3 class="event-title">Samba & Pagode ao Vivo</h3>
+                        <p class="event-description">Uma noite especial com o melhor samba</p>
+                        <div class="event-details">
+                            <p><i class="fas fa-calendar-alt"></i> Quinta-Feira, 21 Dez</p>
+                            <p><i class="fas fa-clock"></i> 20h</p>
+                            <p><i class="fas fa-ticket-alt"></i> Entrada Gratuita</p>
+                        </div>
+                        <p class="event-attraction-label">Atração</p>
+                        <h4 class="event-attraction">Ana Clara</h4>
+                    </div>
+                </div>
+                <div class="card-eventos">
+                    <img class="img-eventos" src="img/imagefut.png" alt="Corinthians X São Paulo" />
+                    <div class="card-eventos-content">
+                        <h3 class="event-title">Clássico Paulista</h3>
+                        <p class="event-description">Clássico paulista com torcida garantida</p>
+                        <div class="event-details">
+                            <p><i class="fas fa-calendar-alt"></i> Domingo, 17 Dez</p>
+                            <p><i class="fas fa-clock"></i> 16h</p>
+                            <p><i class="fas fa-concierge-bell"></i> Consumação</p>
+                        </div>
+                        <p class="event-attraction-label">Atração</p>
+                        <h4 class="event-attraction">Corinthians X São Paulo</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERIA: 2 FILEIRAS COM ESPAÇAMENTO + ANIMAÇÃO -->
+    <section id="pag-galeria">
+        <div class="container">
+            <h2>Galeria de <span class="bar-word">Fotos</span></h2>
+            <div class="galeria-wrapper">
+                <div class="galeria-linha galeria-linha-1">
+                    <img src="img/imagerestau.png" alt="Interior 1" class="galeria-img">
+                    <img src="img/imagemusic.png" alt="Show ao vivo" class="galeria-img">
+                    <img src="img/imagetv.png" alt="TV 85 polegadas" class="galeria-img">
+                    <img src="img/image4.png" alt="Prato peruano" class="galeria-img">
+                    <img src="img/imagefut.png" alt="Jogo" class="galeria-img">
+                    <img src="img/bisteca.png" alt="Prato principal" class="galeria-img">
+                    <img src="img/imagerestau.png" alt="Interior 2" class="galeria-img">
+                </div>
+                <div class="galeria-linha galeria-linha-2">
+                    <img src="img/image4.png" alt="Arroz Chaufa" class="galeria-img">
+                    <img src="img/figado acebolado.png" alt="Lomo Saltado" class="galeria-img">
+                    <img src="img/file de tilapia.png" alt="Tilápia" class="galeria-img">
+                    <img src="img/imagemusic.png" alt="Música" class="galeria-img">
+                    <img src="img/imagetv.png" alt="TV" class="galeria-img">
+                    <img src="img/bisteca.png" alt="Bisteca" class="galeria-img">
+                    <img src="img/imagefut.png" alt="Futebol" class="galeria-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pag-sobre">
+        <div class="container-sobre container">
+            <div class="coluna-sobre-texto">
+                <h2>Sobre o Portela Bar</h2>
+                <p>O Portela Bar nasceu da paixão pela culinária peruana e pelo encontro de culturas. Somos um pedacinho do Peru em Brasília!</p>
+                <p>Nossa cozinha é uma fusão harmoniosa entre os sabores intensos do Peru e a hospitalidade brasileira. Ingredientes frescos e pratos irresistíveis te esperam.</p>
+                <p>Além da gastronomia, somos um ponto de encontro para amantes da música ao vivo e do futebol, oferecendo uma experiência completa de sabor, energia e diversão.</p>
+                <div class="info-sobre">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Brasília</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="far fa-clock"></i>
+                        <p>Seg-Sáb 17h-00h</p>
+                    </div>
+                </div>
+            </div>
+            <div class="coluna-sobre-imagem">
+                <img src="img/imagerestau.png" alt="Interior do Portela Bar">
+            </div>
+        </div>
+    </section>
+
+    <section id="pag-contato">
+        <div class="container-contato container">
+            <div class="coluna-contato-texto">
+                <h2>Venha nos <span class="bar-word-dark">Visitar</span></h2>
+                <div class="info-contato">
+                    <i class="fas fa-map-marker-alt icon-contato"></i>
+                    <div>
+                        <p class="label-contato">Endereço</p>
+                        <p>Rua dos Bares, 123</p>
+                        <p>Centro - Brasília, DF</p>
+                    </div>
+                </div>
+                <div class="info-contato">
+                    <i class="far fa-clock icon-contato"></i>
+                    <div>
+                        <p class="label-contato">Horário de Funcionamento</p>
+                        <p>Segunda a Quinta: 17h - 00h</p>
+                        <p>Sexta e Sábado: 17h - 02h</p>
+                    </div>
+                </div>
+                <div class="info-contato">
+                    <i class="fab fa-whatsapp icon-contato"></i>
+                    <div>
+                        <p class="label-contato">Contato</p>
+                        <p><a href="tel:+5511987654321">(11) 98765-4321</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="coluna-contato-mapa">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3839.080000000000!2d-47.8888!3d-15.7934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTXCsDQ3JzM2LjIiUyA0N8KwNTMnMTkuNyJX!5e0!3m2!1spt-BR!2sbr!4v1234567890" 
+                    width="100%" 
+                    height="420" 
+                    style="border:0; border-radius:16px;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer id="pag-rodape">
+        <div class="rodape-content container">
+            <div class="rodape-col">
+                <h3>Portela Bar</h3>
+                <p>O melhor bar para assistir jogos, curtir música ao vivo e saborear drinks incríveis.</p>
+            </div>
+            <div class="rodape-col">
+                <h3>Contato</h3>
+                <div class="info-rodape">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Rua dos Bares, 123 - Brasília</p>
+                </div>
+                <div class="info-rodape">
+                    <i class="fab fa-whatsapp"></i>
+                    <p>(11) 98765-4321</p>
+                </div>
+                <div class="info-rodape">
+                    <i class="fab fa-instagram"></i>
+                    <p>Instagram</p>
+                </div>
+            </div>
+            <div class="rodape-col">
+                <h3>Horário</h3>
+                <p>Segunda a Quinta: 17h - 00h</p>
+                <p>Sexta e Sábado: 17h - 02h</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2025 <a href="http://instagram.com/" target="_blank">Portela Bar.</a> Todos os direitos reservados.</p>
+            <p>Desenvolvido por Tais, Jose Vinicius e Wellington </p>
+        </div>
+    </footer>
+
+   <script>// ─── Carrega eventos do painel admin (localStorage) ───────────
+    const STORAGE_KEY = 'portela_eventos';
+
+    function iconeClass(tipo) {
+        const map = { ticket: 'fas fa-ticket-alt', bell: 'fas fa-concierge-bell', music: 'fas fa-music', futbol: 'fas fa-futbol' };
+        return map[tipo] || 'fas fa-ticket-alt';
+    }
+
+    function renderEventos() {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) return; // sem dados: mantém HTML estático original
+
+        const eventos = JSON.parse(raw);
+        const container = document.getElementById('container-eventos');
+        if (!container || !eventos.length) return;
+
+        container.innerHTML = eventos.map(ev => `
+            <div class="card-eventos">
+                <img class="img-eventos" src="${ev.imagem || 'img/imagemusic.png'}" alt="${ev.titulo}" onerror="this.src='img/imagemusic.png'">
+                <div class="card-eventos-content">
+                    <h3 class="event-title">${ev.titulo}</h3>
+                    <p class="event-description">${ev.descricao}</p>
+                    <div class="event-details">
+                        <p><i class="fas fa-calendar-alt"></i> ${ev.data}</p>
+                        <p><i class="fas fa-clock"></i> ${ev.horario}</p>
+                        <p><i class="${iconeClass(ev.icone)}"></i> ${ev.entrada}</p>
+                    </div>
+                    <p class="event-attraction-label">Atração</p>
+                    <h4 class="event-attraction">${ev.atracao}</h4>
+                </div>
+            </div>
+        `).join('');
+    }
+
+    renderEventos();
+    </script>
+</body>
+</html>
